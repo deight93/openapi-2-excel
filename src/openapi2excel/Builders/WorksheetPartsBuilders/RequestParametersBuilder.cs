@@ -20,13 +20,13 @@ internal class RequestParametersBuilder(
       if (!operation.Parameters.Any())
          return;
 
-      Cell(1).SetTextBold("PARAMETERS");
+      Cell(1).SetTextBold("매개변수 (파라미터)");
       ActualRow.MoveNext();
       using (var _ = new Section(Worksheet, ActualRow))
       {
-         var nextCell = Cell(1).SetTextBold("Name")
+         var nextCell = Cell(1).SetTextBold("이름")
             .CellRight(attributesColumnIndex - 1).SetTextBold("Location")
-            .CellRight().SetTextBold("Serialization")
+            .CellRight().SetTextBold("직렬화 방식")
             .CellRight();
 
          var lastUsedColumn = _schemaDescriptor.AddSchemaDescriptionHeader(ActualRow, nextCell.Address.ColumnNumber);

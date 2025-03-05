@@ -31,19 +31,19 @@ public class OpenApiDocumentationLanguage : Dictionary<string, string>
    internal static OpenApiDocumentationLanguage Default
       => new()
       {
-         { OpenApiDocumentationLanguageConst.Info, "Info" },
-         { OpenApiDocumentationLanguageConst.Title, "Title" },
-         { OpenApiDocumentationLanguageConst.Version, "Version" },
-         { OpenApiDocumentationLanguageConst.Description, "Description" },
+         { OpenApiDocumentationLanguageConst.Info, "정보" },
+         { OpenApiDocumentationLanguageConst.Title, "제목" },
+         { OpenApiDocumentationLanguageConst.Version, "버전" },
+         { OpenApiDocumentationLanguageConst.Description, "설명" },
 
-         { OpenApiDocumentationLanguageConst.Path, "Path" },
-         { OpenApiDocumentationLanguageConst.PathSummary, "Path summary" },
-         { OpenApiDocumentationLanguageConst.PathDescription, "Path description" },
+         { OpenApiDocumentationLanguageConst.Path, "엔드포인트 경로" },
+         { OpenApiDocumentationLanguageConst.PathSummary, "엔드포인트 경로 요약" },
+         { OpenApiDocumentationLanguageConst.PathDescription, "엔드포인트 경로 설명" },
 
-         { OpenApiDocumentationLanguageConst.OperationType, "Operation type" },
-         { OpenApiDocumentationLanguageConst.OperationSummary, "Operation summary" },
-         { OpenApiDocumentationLanguageConst.OperationDescription, "Operation description" },
-         { OpenApiDocumentationLanguageConst.Deprecated, "Deprecated" },
+         { OpenApiDocumentationLanguageConst.OperationType, "요청 유형" },
+         { OpenApiDocumentationLanguageConst.OperationSummary, "요청 요약" },
+         { OpenApiDocumentationLanguageConst.OperationDescription, "요청 설명" },
+         { OpenApiDocumentationLanguageConst.Deprecated, "사용 중단 여부" },
 
          { OpenApiDocumentationLanguageConst.Yes, "Yes" },
          { OpenApiDocumentationLanguageConst.No, "No" }

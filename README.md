@@ -111,7 +111,7 @@ dotnet build --configuration Release
 
 ---
 
-## ** 3. `.nupkg` 패키지 생성**
+## **3. `.nupkg` 패키지 생성**
 전역 설치가 필요한 CLI 도구이므로, `.nupkg` 패키지를 만들어야 해.
 
 ```sh
@@ -121,7 +121,7 @@ dotnet pack --configuration Release --output ./nupkg
 
 ---
 
-## ** 4. 수정된 패키지를 전역 도구로 설치**
+## **4. 수정된 패키지를 전역 도구로 설치**
 이제 수정된 `openapi2excel.cli`를 다시 설치
 
 ```sh
@@ -131,7 +131,7 @@ dotnet tool install --global --add-source ./nupkg openapi2excel.cli
 
 ---
 
-## ** 5. 설치 확인**
+## **5. 설치 확인**
 제대로 설치되었는지 확인하려면 다음 명령어를 실행
 
 ```sh
@@ -141,7 +141,7 @@ dotnet tool list --global
 
 ---
 
-## ** 6. 실행 테스트**
+## **6. 실행 테스트**
 ```sh
 openapi2excel --help
 ```

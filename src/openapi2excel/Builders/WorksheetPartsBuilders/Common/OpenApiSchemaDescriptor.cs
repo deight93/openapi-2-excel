@@ -14,19 +14,19 @@ internal class OpenApiSchemaDescriptor(IXLWorksheet worksheet, OpenApiDocumentat
 
    public int AddSchemaDescriptionHeader(RowPointer actualRow, int startColumn)
    {
-      var cell = worksheet.Cell(actualRow, startColumn).SetTextBold("Type")
-         .CellRight().SetTextBold("Object type")
-         .CellRight().SetTextBold("Format")
-         .CellRight().SetTextBold("Length")
+      var cell = worksheet.Cell(actualRow, startColumn).SetTextBold("타입")
+         .CellRight().SetTextBold("객체 타입")
+         .CellRight().SetTextBold("형식")
+         .CellRight().SetTextBold("길이")
          .CellRight().SetTextBold("Required")
          .CellRight().SetTextBold("Nullable")
          .CellRight().SetTextBold("Range")
          .CellRight().SetTextBold("Pattern")
          .CellRight().SetTextBold("Enum")
          .CellRight().SetTextBold("Deprecated")
-         .CellRight().SetTextBold("Default")
-         .CellRight().SetTextBold("Example")
-         .CellRight().SetTextBold("Description");
+         .CellRight().SetTextBold("기본값")
+         .CellRight().SetTextBold("예제")
+         .CellRight().SetTextBold("설명");
 
       return cell.GetColumnNumber();
    }

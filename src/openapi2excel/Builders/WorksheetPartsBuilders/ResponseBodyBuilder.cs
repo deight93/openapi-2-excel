@@ -16,7 +16,7 @@ internal class ResponseBodyBuilder(
       if (!operation.Responses.Any())
          return;
 
-      Cell(1).SetTextBold("RESPONSE");
+      Cell(1).SetTextBold("응답");
       ActualRow.MoveNext();
       using (var _ = new Section(Worksheet, ActualRow))
       {
