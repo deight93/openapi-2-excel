@@ -73,9 +73,16 @@ internal class PropertiesTreeBuilder(
       {
          AddProperties(schema.AllOf[0], level, options);
       }
-      if (schema.AnyOf.Count == 1)
+      if (schema.AnyOf.Count > 0)
       {
-         AddProperties(schema.AnyOf[0], level, options);
+          foreach (var subSchema in schema.AnyOf)
+          {
+              // "null"이 아닌 유효한 객체만 처리
+              if (subSchema.Type != "null" && (subSchema.Properties.Count > 0 || subSchema.Reference != null))
+              {
+                  AddProperties(subSchema, level, options);
+              }
+          }
       }
       foreach (var property in schema.Properties)
       {
