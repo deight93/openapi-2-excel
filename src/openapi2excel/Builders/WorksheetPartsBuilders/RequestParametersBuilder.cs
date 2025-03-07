@@ -25,7 +25,7 @@ internal class RequestParametersBuilder(
       using (var _ = new Section(Worksheet, ActualRow))
       {
          var nextCell = Cell(1).SetTextBold("이름")
-            .CellRight(attributesColumnIndex - 1).SetTextBold("Location")
+            .CellRight(attributesColumnIndex - 1).SetTextBold("파라미터 종류")
             .CellRight().SetTextBold("직렬화 방식")
             .CellRight();
 

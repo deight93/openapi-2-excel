@@ -39,7 +39,7 @@ internal class ResponseBodyBuilder(
       ActualRow.MoveNext();
 
       var responseHeadertRowPointer = ActualRow.Copy();
-      Cell(1).SetTextBold("Response headers");
+      Cell(1).SetTextBold("응답 헤더");
       ActualRow.MoveNext();
 
       using (var _ = new Section(Worksheet, ActualRow))
@@ -59,7 +59,7 @@ internal class ResponseBodyBuilder(
 
       void InsertHeader(OpenApiSchemaDescriptor schemaDescriptor)
       {
-         var nextCell = Cell(1).SetTextBold("Name")
+         var nextCell = Cell(1).SetTextBold("이름")
             .CellRight(attributesColumnIndex + 1).GetColumnNumber();
 
          var lastUsedColumn = schemaDescriptor.AddSchemaDescriptionHeader(ActualRow, nextCell);

@@ -7,7 +7,7 @@ namespace openapi2excel.core.Builders.WorksheetPartsBuilders.Common;
 internal class OpenApiSchemaDescriptor(IXLWorksheet worksheet, OpenApiDocumentationOptions options)
 {
    public int AddNameHeader(RowPointer actualRow, int startColumn)
-      => worksheet.Cell(actualRow, startColumn).SetTextBold("Name").GetColumnNumber();
+      => worksheet.Cell(actualRow, startColumn).SetTextBold("이름").GetColumnNumber();
 
    public int AddNameValue(string name, int actualRow, int startColumn)
       => worksheet.Cell(actualRow, startColumn).SetText(name).GetColumnNumber();
@@ -18,12 +18,12 @@ internal class OpenApiSchemaDescriptor(IXLWorksheet worksheet, OpenApiDocumentat
          .CellRight().SetTextBold("객체 타입")
          .CellRight().SetTextBold("형식")
          .CellRight().SetTextBold("길이")
-         .CellRight().SetTextBold("Required")
-         .CellRight().SetTextBold("Nullable")
-         .CellRight().SetTextBold("Range")
-         .CellRight().SetTextBold("Pattern")
-         .CellRight().SetTextBold("Enum")
-         .CellRight().SetTextBold("Deprecated")
+         .CellRight().SetTextBold("필수 여부")
+         .CellRight().SetTextBold("널 가능 여부")
+         .CellRight().SetTextBold("길이")
+         .CellRight().SetTextBold("패턴")
+         .CellRight().SetTextBold("열거형")
+         .CellRight().SetTextBold("사용 중단 여부")
          .CellRight().SetTextBold("기본값")
          .CellRight().SetTextBold("예제")
          .CellRight().SetTextBold("설명");
